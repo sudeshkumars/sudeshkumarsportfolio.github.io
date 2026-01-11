@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudesh Kumar S | MERN Stack Developer</title>
+    <meta name="description" content="Full-Stack MERN Developer based in India. Building scalable web applications with MongoDB, Express, React, and Node.js.">
+    
+    <meta http-equiv="Cache-control" content="public">
+    
+    <link rel="preload" as="image" href="assests/pic.jpg" fetchpriority="high">
+    
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <link rel="icon" href="assests/home.svg">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">Sudeshkumar<span>.info</span></a>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact" class="nav-btn">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content fade-in-up">
+                <span class="tagline">Hello, I am Sudesh</span>
+                <h1>MERN Stack <br> <span class="text-highlight">Developer</span></h1>
+                <p>I build scalable, high-performance web applications using MongoDB, Express, React, and Node.js.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View Portfolio <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                </div>
+                <div class="social-hero">
+                    <a  target="_blank" href="https://github.com/sudeshkumars" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a  target="_blank" href="https://www.linkedin.com/in/sudesh-kumars/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="hero-image fade-in-up delay-200">
+                <div class="img-wrapper">
+                    <img src="assests/pic2.jpg" 
+                         alt="Sudesh Kumar S" 
+                         width="220" height="220" 
+                         fetchpriority="high"
+                         decoding="sync">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container about-container">
+            <div class="about-img reveal">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                     alt="Coding Setup" 
+                     width="500" height="375" 
+                     loading="lazy" 
+                     decoding="async">
+            </div>
+            <div class="about-text reveal">
+                <h2 class="section-title">About Me</h2>
+                <h3>Architecting the Web of Tomorrow</h3>
+                <p>I am Sudesh Kumar S, a passionate developer based in India. My journey started with a simple "Hello World" and evolved into architecting complex cloud-native applications.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <h4>3+</h4>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-coffee"></i>
+                        <h4>1</h4>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary" download>Download CV <i class="fas fa-download"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Tech Stack</h2>
+                <p class="section-subtitle">My arsenal of tools for building modern apps.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <div class="icon-box"><i class="fab fa-react"></i></div>
+                    <h3>Frontend</h3>
+                    <p>React.js, Redux, HTML5, CSS3, Tailwind</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="icon-box"><i class="fab fa-node-js"></i></div>
+                    <h3>Backend</h3>
+                    <p>Node.js, Express.js, REST APIs, GraphQL</p>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="icon-box"><i class="fas fa-database"></i></div>
+                    <h3>Database</h3>
+                    <p>MongoDB, Mongoose, PostgreSQL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Real-world solutions built from scratch.</p>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card reveal">
+                    <div class="project-img">
+                        <img src="assests/pro1.png" alt="Amazon Clone" width="400" height="180" loading="lazy" decoding="async">
+                        <div class="overlay">
+                            <a target="_blank" href="https://projectamazonpr1.vercel.app/" aria-label="View Project"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Amazon Clone</h3>
+                        <div class="tech-tags"><span>MERN</span></div>
+                        <p>Static Amazon website clone</p>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-img">
+                        <img src="assests/pro2.png" alt="E-Commerce" width="400" height="180" loading="lazy" decoding="async">
+                        <div class="overlay">
+                            <a target="_blank" href="https://bmwproject-ashen.vercel.app/" aria-label="View Project"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>BMW Clone</h3>
+                        <div class="tech-tags"><span>React</span></div>
+                        <p>High performance car showcase</p>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-img">
+                        <img src="assests/pro3.png" alt="Social App" width="400" height="180" loading="lazy" decoding="async">
+                        <div class="overlay">
+                            <a target="_blank" href="https://sudeshkumars.github.io/sudeshkumars.github.io./" aria-label="View Project"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>KFC Website</h3>
+                        <div class="tech-tags"><span>Bootstrap</span></div>
+                        <p>Responsive food delivery UI</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss your next project.</p>
+            </div>
+            <div class="contact-wrapper reveal">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div><h4>Email</h4><p>sudeshkumars@zohomail.in</p></div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div><h4>Location</h4><p>Kochi, India</p></div>
+                    </div>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group"><input type="text" id="name" placeholder="Your Name"></div>
+                    <div class="form-group"><input type="email" id="email" placeholder="Your Email"></div>
+                    <div class="form-group"><input type="text" id="subject" placeholder="Subject"></div>
+                    <div class="form-group"><textarea id="message" rows="5" placeholder="Your Message"></textarea></div>
+                    <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+                    <div id="successMsg" class="success-message">Message Sent!</div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sudesh Kumar S.</p>
+            <div class="social-footer">
+                <a target="_blank" href="https://github.com/sudeshkumars" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a  target="_blank" href="https://www.linkedin.com/in/sudesh-kumars/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
