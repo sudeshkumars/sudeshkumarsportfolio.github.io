@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu
+    
+
+    try {
+        emailjs.init("5_G8A9TeZx1GARsk2"); 
+    } catch (e) {
+        console.log("EmailJS not loaded yet");
+    }
+
+
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     
@@ -7,13 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
-        
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => navLinks.classList.remove('active'));
         });
     }
 
-    // Performance Optimized Scroll Observer
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -24,26 +30,59 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.reveal, .fade-in-up').forEach(el => observer.observe(el));
-    
-    // Contact Form Logic (Same as before)
+
+  
     const form = document.getElementById('contactForm');
-    if(form) {
+    
+    if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
+            
             const btn = document.querySelector('.submit-btn');
             const msg = document.getElementById('successMsg');
-            const originalText = btn.innerText;
             
-            btn.innerText = 'Sending...';
+           
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+          
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
             btn.disabled = true;
-            
-            setTimeout(() => {
+
+     
+            emailjs.send("service_1x5cs07", "template_g62ym8n", {
+                from_name: name,
+                from_email: email,
+                subject: subject,
+                message: message
+            })
+            .then(() => {
+             
                 form.reset();
-                btn.innerText = originalText;
+                btn.innerHTML = originalText;
                 btn.disabled = false;
                 msg.style.display = 'block';
-                setTimeout(() => msg.style.display = 'none', 3000);
-            }, 1000);
+                msg.style.backgroundColor = "#dcfce7";
+                msg.style.color = "#15803d";
+                msg.innerText = "Message Sent Successfully!";
+                
+                setTimeout(() => {
+                    msg.style.display = 'none';
+                }, 4000);
+            })
+            .catch((err) => {
+           
+                console.error('EmailJS Error:', err);
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                msg.style.display = 'block';
+                msg.style.backgroundColor = "#fee2e2";
+                msg.style.color = "#dc2626";
+                msg.innerText = "Failed to send. Check console.";
+            });
         });
     }
 });
